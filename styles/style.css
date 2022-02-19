@@ -1,0 +1,394 @@
+@font-face {
+    font-family: monue;
+    src: url(fonts/MonumentExtended-Regular.otf) format("opentype");;
+ }
+ @font-face {
+  font-family: monuE;
+ src: url(fonts/MonumentExtended-Ultrabold.otf) format("opentype");;
+ }
+ @font-face {
+    font-family: spydolls;
+ src: url(fonts/Spydolls\ demo.ttf);
+ }
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+
+}
+body{
+    overflow: hidden;
+
+}
+
+/* Preloader */
+.animation{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    background-color: black;
+    color: white;
+    overflow: hidden;
+    justify-content: center;
+    z-index: 100;
+    width: 100%;
+}
+.animate{
+    font-size: 100px;
+    text-transform: uppercase;
+    color: #e0e0e0;
+    font-family: monue;
+    animation: animate 10s linear infinite;
+}
+@keyframes animate {
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(100%);
+    }
+}
+.animate span{
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 3px #fff;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* Preloader End */
+
+
+.container{
+    background-image: url("images/javier-garcia-jJbQBP_yh68-unsplash.jpg");
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+    
+}
+.button{
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    font-family: monue;
+    font-size: 1.3rem;
+    word-spacing: 3px;
+
+}
+
+/* Navigation menu */
+.menu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    transform: translateX(-100%);
+}
+.menu .button{
+    color: white;
+
+}
+.ul{
+    position: absolute;
+    left: 10%;
+    display: flex;
+    width: 300px;
+    justify-content: center;
+    align-items: left;
+    height: 100vh;
+    flex-direction: column;
+}
+.ul li{
+    margin: 20px 0;
+    z-index: 2;
+
+}
+.ul li a{
+    text-decoration: none;
+    color: white;
+    transition: 2s;
+    font-family: 'monue';
+    font-size: 4rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 500;
+    mix-blend-mode: difference;
+
+}
+.social{
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    display: flex;
+    height: 80px;
+    width: 100%;
+
+}
+.social ul{
+    margin-left: 40px;
+    display: flex;
+
+}
+.social ul li{
+    margin: 0px 10px;
+
+}
+.social ul li a{
+    text-decoration: none;
+    color: white;
+    font-family: 'monue';
+    font-size: 18px;
+    font-weight: lighter;
+
+}
+.bg{
+    position: absolute;
+    width: 250px;
+    filter: grayscale(1);
+    height: 300px;
+    mix-blend-mode: difference;
+}
+.bg1{
+    top: 45px;
+    left: 80px;
+    background: url(images/bg1.jpg) no-repeat 50% 50%;
+    background-size: cover;
+    opacity: 0;
+    transform: translateY(-50%);
+    transition: 1s ease-in-out;
+}
+.bg2{
+    top: 100px;
+    left: 150px;
+    background: url(images/bg2.jpg) no-repeat 50% 50%;
+    background-size: cover;
+    opacity: 0;
+    transform: translateY(-50%);
+    transition: 1s ease-in-out;
+    
+}
+.bg3{
+    top: 250px;
+    left: 200px;
+    background: url(images/bg3.jpg) no-repeat 50% 50%;
+    background-size: cover;
+    opacity: 0;
+    transform: translateY(-50%);
+    transition: 1s ease-in-out;
+    
+}
+.bg4{
+    top: 400px;
+    left: 200px;
+    background: url(images/bg4.jpg) no-repeat 50% 50%;
+    background-size: cover;
+    opacity: 0;
+    transform: translateY(-50%);
+    transition: 1s ease-in-out;
+    
+}
+.li1:hover ~ .bg1,
+.li2:hover ~ .bg2,
+.li3:hover ~ .bg3,
+.li4:hover ~ .bg4{
+    opacity: 1;
+    transform: translateY(0%);
+    transition: 1s ease-in-out;
+}
+.ul li a:hover{
+    transition: 0.5s;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px white;
+}
+
+/* navigation menu end */
+
+
+* {
+    box-sizing: border-box;
+  }
+.column {
+    float: left;
+    width: 100%;
+    padding: 10px;
+    text-decoration: none;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+
+
+  .h1-title{
+      margin-left: 7%;
+      font-family: monue;
+      color: white;
+      padding-right: 20%;
+      font-size: 5rem;
+      text-transform: uppercase;
+      margin-top: 10%;
+  }
+
+  .column h2{
+    margin-left: 7%;
+    margin-top: 3%;
+    font-family: monue;
+    color: white;
+    padding-right: 20%;
+    font-size: 1rem;
+    
+    
+  }
+
+  .column a{
+    text-decoration: none;
+  }
+
+  .h1-subt{
+    margin-left: 7%;
+    font-family: monue;
+    color: white;
+    margin-right: 20%;
+    font-size: 4.4rem;
+   text-decoration: none;
+  
+}
+
+
+
+  @media screen and (max-width: 1200px) {
+   
+    .h1-title{
+      padding-top:0%;
+      padding-right: 0%;
+      padding-left: 0%;
+      font-size: 2rem;
+    }
+
+  }
+
+  @media screen and (max-width: 1024px) {
+
+    .h1-title{
+        padding-top:0%;
+        padding-right: 0%;
+        padding-left: 0%;
+        font-size: 2rem;
+      }
+  }
+  @media screen and (max-width: 768px) {
+
+    .h1-title{
+        padding-top:0%;
+        padding-right: 0%;
+        padding-left: 0%;
+        font-size: 2rem;
+      }
+
+}
+@media screen and (max-width: 480px) {
+
+    .h1-title{
+        padding-top:20%;
+        padding-right: 30%;
+        padding-left: 0%;
+        font-size: 2rem;
+      }
+}
+
+
+
+
+
+.h1-subt:before{
+	content: '';
+	width: 0%;
+	height: 15px;
+	background: #000;
+	position: absolute;
+	top: 55px;
+	left: -5px;
+	z-index: -1;
+	transition-timing-function: cubic-bezier(.8,.09,1,.44);
+	transition-delay: 400ms;
+	transition: all 600ms cubic-bezier(1, 0, 0, 1) 0ms;
+}
+.h1-subt.red:before{
+	background: #000;
+}
+
+.h1-subt:hover:before{
+	content: '';
+	width: 100%;
+	height: 15px;
+	position: absolute;
+	top: 55px;
+	left: -5px;
+	z-index: -1;
+}
+.red{
+	color: #000;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+
+
+
+.footer {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 40px;
+    width:100%;
+    color: white;
+    text-align: center;
+ }
+
+ .footer-in {
+    float: left;
+    width: 25%;
+    font-family: monue;
+    padding-bottom: 10%;
+    word-spacing: 5px;
+    color: white;
+
+  }
+
+  .footer-in a{
+    text-decoration: none;
+    color: white;
+  }

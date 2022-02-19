@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vishal Patil | Portfolio 2022</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="js/gsap.min.js"></script>
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+</head>
+<body>
+
+      <!-- animation   preloader-->
+   <div class="animation">
+    <h1 class="animate">loading<span>loading</span>loading<span>loading</span></h1>
+    <h1 class="animate">loading<span>loading</span>loading<span>loading</span></h1>
+    <h1 class="animate">loading<span>loading</span>loading<span>loading</span></h1>
+    <h1 class="animate">loading<span>loading</span>loading<span>loading</span></h1>
+    <h1 class="animate">loading<span>loading</span>loading<span>loading</span></h1>
+    <h1 class="animate">loading<span>loading</span>loading<span>loading</span></h1>
+   </div>
+
+  
+    <div class="container">
+        <div class="button" onclick="toggle()">Menu</div>
+
+
+        <div class="row">
+            <div class="column">
+             <h1 class="h1-title">have a project for us?</h1>
+            </div>
+            <div class="column">
+              <h2>Email us</h2>
+              <a href=""><h1 class="h1-subt">hello@vishalpatil.com</h1></a>
+            </div>
+          </div>
+
+
+          <div class="footer">
+            <div class="row">
+                <div class="footer-in">
+                    <a href=""> <h3>twitter</h3></a>
+                </div>
+                <div class="footer-in">
+                    <a href=""> <h3>instagram</h3></a>
+                </div>
+                <div class="footer-in">
+                    <a href="">  <h3>linkedIn</h3></a>
+                </div>
+                <div class="footer-in">
+                    <a href=""></a> <h3>©2022 Vishal Patil</h3></a>
+                  </div>
+              </div>
+          </div>
+
+    </div>
+    <div class="menu">
+        <div class="button" onclick="togglec()">close</div>
+
+        <ul class="ul">
+            <li class="li1 li"><a href="#">Home</a></li>
+            <li class="li2 li"><a href="#">About</a></li>
+            <li class="li3 li"><a href="#">Works</a></li>
+            <li class="li4 li"><a href="#">Contact</a></li>
+            <div class="bg1 bg"></div>
+            <div class="bg2 bg"></div>
+            <div class="bg3 bg"></div>
+            <div class="bg4 bg"></div>
+        </ul>
+        <div class="social">
+            <ul>
+            <li class="social-li"><a href="#">facebook</a></li>
+            <li class="social-li"><a href="#">instagram</a></li>
+            <li class="social-li"><a href="#">twitter</a></li>
+        </ul>
+        </div>
+    </div>
+    <script>
+        var tl = gsap.timeline({
+            paused: "true"
+        });
+        tl.to(".menu",{
+            duration: 1,
+            x: "0%",
+            ease: Expo.easeInOut
+        });
+        tl.fromTo(".li",{
+            y:"-100%",
+            opacity: 0
+        },{
+            duration: .5,
+            opacity: 1,
+            y: "0%",
+            stagger: 0.25
+        });
+        tl.fromTo(".social-li",{
+            y:"-50%",
+            opacity: 0
+        },{
+            duration:0.8,
+            opacity: 1,
+            stagger: 0.25,
+            ease: Expo.easeOut
+        },
+        "-=0.5");
+        
+        function toggle(){
+            tl.play();
+        }
+        function togglec(){
+            tl.reverse();
+        }
+
+    </script>
+ <script src="js/script.js"></script>
+</body>
+</html>
